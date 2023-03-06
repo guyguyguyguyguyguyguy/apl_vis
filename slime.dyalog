@@ -12,15 +12,16 @@ size ← x × y × z
 
 sender shape
 
+RR ← ¯1+?x y⍴ 2 
+
 slime ← {}
 
-⍝ This works!
 ∇ f ← OneStep arr
   rgb ← x y z ⍴ 3/arr
   te  ← ⎕JSON (size ⍴ rgb)
-  sender te
+  sender ⊢te
   _←⎕dl÷5
-  f ← ...  
+  f ← slime arr  
 ∇
 
 OneStep ⍣≡ RR
